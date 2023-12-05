@@ -6,3 +6,15 @@
     color: darkorchid;
     font-size: 3rem;
 }
+
+
+.style1{
+    color:blue;
+    background-color: yellow;
+}
+
+
+.style2{
+    color:yellow;
+    background-color: blue;
+}

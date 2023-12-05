@@ -1,17 +1,5 @@
 <div class="main">
   <h1>Welcome to Angular</h1>
-  <button (click)="changeUsername()">Clck on change!</button>
-  <!-- interpolation -->
-  <h2>{{ eid }}</h2>
-  <h2>{{ username }}</h2>
 
-  <h2 *ngIf="status">{{ mobile }}</h2>
-
-  <button (click)="changeStatus()">{{buttonText}}</button>
-
-  <h2>{{ address.city }}</h2>
-  <h2 *ngFor="let s of skills">{{ s }}</h2>
-  <input type="text" [value]="username" />
-
-  <img [src]="imagePath" width="400px" alt="" />
+ <app-products />
 </div>

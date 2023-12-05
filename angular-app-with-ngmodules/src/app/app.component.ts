@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {UserType} from './models/UserType'
+import {ProductsComponent} from './products/products.component'
 
 @Component({
   selector: 'app-root',
@@ -6,38 +8,16 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  eid:string|number=100;
-  username:string='Suresh';
-  mobile:number=999999; 
-  status:boolean=true;
-  buttonText:string='Hide'
-  address:Address={
-    city:'hyd'
-  }
-
-  skills:string[]=['js','react','angular','node','mongo']
-  imagePath:string='https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTA4L3Jhd3BpeGVsX29mZmljZV8zMF9hbl9hYnN0cmFjdF92aXN1YWxpemF0aW9uX29mX2FfYmxvY2tjaGFpbl9uZV80ZWIwODVmNC0yODFlLTRkYTMtYjdlMS00MmY1ZTFkMDkyM2VfMS5qcGc.jpg'
-
-  changeUsername(){
-    this.username='Mahesh'
-  }
-
-  changeStatus(){
-   this.status=!this.status;
-   if(this.buttonText==='Show'){
-    this.buttonText="Hide"
-   }else{
-    this.buttonText="Show"
-   }
+  
+  a:number=10;
+  username:string='kiran'
+  user:UserType={
+    uid:100,
+    name:'bhanu'
   }
 
 }
 
-
-//Create address type
-interface Address{
-  city:string;
-}
 
 
 

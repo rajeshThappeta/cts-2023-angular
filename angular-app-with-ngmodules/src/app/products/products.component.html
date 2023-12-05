@@ -1,0 +1,11 @@
+<h1 class="display-1 text-secondary text-center">List of Products</h1>
+
+<div class="container">
+  <div class="row row-cols-sm-2 row-cols-md-3">
+    @for(product of products;track product.pid){
+    <div class="col">
+      <app-product [product]="product" />
+    </div>
+    }
+  </div>
+</div>
