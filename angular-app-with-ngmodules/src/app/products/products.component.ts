@@ -24,11 +24,27 @@ export class ProductsComponent {
         'https://m.media-amazon.com/images/I/61R5iFayDWL._AC_UY436_FMwebp_QL65_.jpg',
     },
     {
-      pid: 100,
+      pid: 300,
       productName: 'Headset',
       price: 20000,
       productImage:
         'https://m.media-amazon.com/images/I/61X+8csYlwL._AC_UY436_FMwebp_QL65_.jpg',
     },
+    {
+      pid: 400,
+      productName: 'Washing machine',
+      price: 80000,
+      productImage:
+        'https://m.media-amazon.com/images/I/6148W71OMfL._AC_UY436_FMwebp_QL65_.jpg',
+    },
+    {
+      pid: 400,
+      productName: 'Oven',
+      price: 120000,
+      productImage:
+        'https://m.media-amazon.com/images/I/61fw7feCMyL._AC_UY436_FMwebp_QL65_.jpg',
+    },
   ];
+
+  x:number=0;
 }

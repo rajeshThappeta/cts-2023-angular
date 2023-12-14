@@ -1,0 +1,4 @@
+<h1>Parent</h1>
+<h2>Data received from child : {{toGetDataFromChild}}</h2>
+<button (click)="sendToChild(100)">Send Data to Child</button>
+<app-child [dataFromParent]="a" (myEvent1)="toGetDataFromChild=$event">Loading....</app-child>

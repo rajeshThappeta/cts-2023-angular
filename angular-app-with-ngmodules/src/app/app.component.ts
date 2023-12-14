@@ -1,11 +1,16 @@
 import { Component } from '@angular/core';
 import {UserType} from './models/UserType'
-import {ProductsComponent} from './products/products.component'
+// import {AComponent} from './a/a.component';
+// import {BComponent} from './b/b.component';
+// import {CComponent} from './c/c.component'
+import {FormDemoComponent} from './form-demo/form-demo.component'
+
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
+//  providers:[TestService]
 })
 export class AppComponent {
   

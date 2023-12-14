@@ -1,10 +1,11 @@
 <h1 class="display-1 text-secondary text-center">List of Products</h1>
 
+<h2>{{x}}</h2>
 <div class="container">
-  <div class="row row-cols-sm-2 row-cols-md-3">
+  <div class="row row-cols-sm-2 row-cols-md-3 g-4">
     @for(product of products;track product.pid){
     <div class="col">
-      <app-product [product]="product" />
+      <app-product [product]="product" (myEvent)="x=$event" />
     </div>
     }
   </div>
