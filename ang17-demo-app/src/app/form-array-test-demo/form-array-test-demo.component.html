@@ -1,0 +1,23 @@
+<form [formGroup]="testForm" (ngSubmit)="onFormSubmit()">
+  <input type="text" formControlName="username" id="" />
+  <div formGroupName="address">
+    <input type="text" formControlName="city" />
+  </div>
+
+  <!-- ITEARTE SKILLS ARRAY -->
+  @for(s of skills;track s){
+  <input
+    type="checkbox"
+    name=""
+    id="{{ s }}"
+    value="{{ s }}"
+    (change)="changeInput($event)"
+  />
+  <label for="{{ s }}">{{ s }}</label>
+  <br />
+  }
+  <button type="submit">Submit</button>
+</form>
+
+
+<app-child1 />

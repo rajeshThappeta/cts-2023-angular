@@ -1,0 +1,21 @@
+@for(user of usersList;track user.id;let ind=$index){
+<div class="bg-secondary m-3  w-50 mx-auto text-info">
+  @if(!userEditStatus||indexOfUserToEdit!==ind){
+  <p class="lead fs-2">{{ user.name }}</p>
+  <p class="lead fs-2">{{ user.email }}</p>
+  <button class="btn btn-warning mb-3" (click)="onUserEdit(user, ind)">Edit</button>
+  }@else{
+    @if(indexOfUserToEdit===ind){
+  <form
+    [formGroup]="userEditForm"
+    (ngSubmit)="onUserSave(ind,user.id)"
+    class="bg-warning p-3 text-danger "
+  >
+    <input type="text" formControlName="name"  class="form-control mb-3" />
+    <input type="text" formControlName="email"  class="form-control mb-3" />
+    <button class="btn btn-success" type="submit">Save</button>
+  </form>
+}
+  }
+</div>
+}

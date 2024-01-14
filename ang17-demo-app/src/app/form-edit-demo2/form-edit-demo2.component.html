@@ -1,0 +1,14 @@
+<div class="bg-secondary text-warning w-50 mx-auto mt-5 p-3">
+  <h1>User details</h1>
+  @if(userEditStatus===false){
+  <p class="lead">{{ user.username }}</p>
+  <p class="lead">{{ user.email }}</p>
+  <button class="btn btn-warning" (click)="onUserEdit()">Edit</button>
+  }@else{
+  <form [formGroup]="userEditForm" (ngSubmit)="onSaveUser()">
+    <input type="text" class="form-control mb-3" formControlName="username" />
+    <input type="email" class="form-control mb-3" formControlName="email" />
+    <button class="btn btn-success" type="submit">Save</button>
+  </form>
+  }
+</div>

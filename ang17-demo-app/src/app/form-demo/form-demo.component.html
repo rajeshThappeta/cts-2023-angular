@@ -1,0 +1,18 @@
+<form [formGroup]="statesInfoForm" (ngSubmit)="onFormSubmit()">
+  <select formArrayName="states" (change)="getDistictsOfSelectedState($event)">
+    <option value="" selected disabled>Select a state</option>
+    @for(s of states.controls;track s.value;){
+    <option value="{{ s.value }}">{{ s.value }}</option>
+    }
+  </select>
+
+  <div formArrayName="districts">
+    @for(s of districts.controls;track s.value;){
+    <input type="checkbox" value="{{ s.value }}" id="{{ s.value }}" (change)='selectedDistrict($event)'/>
+    <label for="">{{ s.value }}</label>
+    }@empty{
+      <p>No state selected yet</p>
+      }
+  </div>
+  <button type="submit">Submit</button>
+</form>
